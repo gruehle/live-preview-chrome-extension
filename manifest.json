@@ -1,0 +1,23 @@
+{
+  "name": "Brackets Live Preview",
+  "description": "Enables Live Preview from Brackets",
+  "version": "0.1",
+  "permissions": [
+    "tabs",
+    "debugger"
+  ],
+  "background": {
+    "scripts": ["background.js"]
+  },
+   "content_scripts": [
+     {
+       "matches": ["http://*/*", "https://*/*"],
+       "js": ["page.js"]
+     }
+   ],
+  "browser_action": {
+    "default_icon": "brackets-logo-16.png",
+    "default_title": "Brackets Live Preview"
+  },
+  "manifest_version": 2
+}
